@@ -1,7 +1,36 @@
 from PIL import Image
 
-def purple():
+oddelovac = "=" * 120
+types = ("Purple filter - 1", "Warm filter - 2", "Black and white filter - 3")
+photos = ("Friends on the beach - 1", "Football goalkeeper - 2", "Forest - 3","Friends on Volcano - 4","Erasmus group photo - 5",)
+print("\n")
+print("Welcome in mine filter studio!".upper().center(62),"Which photo would you like to edit?". lower().center(62),
+          oddelovac,sep="\n")
+print(f"| {' | '.join(photos)} |".center(62), oddelovac, sep="\n")
+
+volba0 = int(input("1,2,3,4,5 ?\n: "))
+
+if (volba0 == 1):
     picture = Image.open("beach.jpg")
+
+if (volba0 == 2):
+    picture = Image.open("gadzo.jpg")
+
+if (volba0 == 3):
+    picture = Image.open("forest.jpg")
+
+if (volba0 == 4):
+    picture = Image.open("erasmus_volcano.jpg")
+
+if (volba0 == 5):
+    picture = Image.open("erasmus_group_photo.jpg")   
+
+print("Which filter would you like to apply on photo?".lower().center(62),)
+print(f"| {' | '.join(types)} |".center(62), oddelovac, sep="\n")
+
+
+def purple():
+   # picture = Image.open("beach.jpg")
     width, high = picture.size
     x = 0
     while x < width:
@@ -16,7 +45,7 @@ def purple():
 
 
 def warm_colors():
-    picture = Image.open("beach.jpg")
+    #picture = Image.open("beach.jpg")
     width, high = picture.size
     x = 0
     while x < width:
@@ -34,7 +63,7 @@ def warm_colors():
 
 
 def blckwhite():
-    picture = Image.open("beach.jpg")
+    #picture = Image.open("beach.jpg")
     width, high = picture.size
     x = 0
     while x < width:
@@ -49,20 +78,13 @@ def blckwhite():
         x += 1
     picture.show()
 
-oddelovac = "=" * 70
-types = ("Purple filter - 1", "Warm filter - 2", "Black and white filter - 3")
-print("\n")
-print("Welcome in mine filter studio!".upper().center(70),"Which filter would you like to apply on photo?".lower().center(62),
-          oddelovac,sep="\n")
-print(f"| {' | '.join(types)} |".center(62), oddelovac, sep="\n")
+volba1 = int(input("1,2,3 ?\n: "))
 
-volba = int(input("1,2,3 ?\n: "))
-
-if (volba == 1):
+if (volba1 == 1):
     purple()
 
-if (volba == 2):
+if (volba1 == 2):
     warm_colors()
 
-if (volba == 3):
+if (volba1 == 3):
     blckwhite()    
