@@ -1,8 +1,8 @@
 from PIL import Image
 
-oddelovac = "=" * 120
+oddelovac = "=" * 140
 types = ("Purple filter - 1", "Warm filter - 2", "Black and white filter - 3")
-photos = ("Friends on the beach - 1", "Football goalkeeper - 2", "Forest - 3","Friends on Volcano - 4","Erasmus group photo - 5",)
+photos = ("Friends in the PUB - 1", "Hard working students - 2", "Friends on dinner - 3","Friends on Volcano - 4","Erasmus group photo - 5",)
 print("\n")
 print("Welcome in mine filter studio!".upper().center(62),"Which photo would you like to edit?". lower().center(62),
           oddelovac,sep="\n")
@@ -11,13 +11,13 @@ print(f"| {' | '.join(photos)} |".center(62), oddelovac, sep="\n")
 volba0 = int(input("1,2,3,4,5 ?\n: "))
 
 if (volba0 == 1):
-    picture = Image.open("beach.jpg")
+    picture = Image.open("pub.jpg")
 
 if (volba0 == 2):
-    picture = Image.open("gadzo.jpg")
+    picture = Image.open("students.jpg")
 
 if (volba0 == 3):
-    picture = Image.open("forest.jpg")
+    picture = Image.open("dinner.jpg")
 
 if (volba0 == 4):
     picture = Image.open("erasmus_volcano.jpg")
