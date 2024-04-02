@@ -4,7 +4,7 @@ oddelovac = "=" * 140
 types = ("Purple filter - 1", "Warm filter - 2", "Black and white filter - 3")
 photos = ("Friends in the PUB - 1", "Hard working students - 2", "Friends on dinner - 3","Friends on Volcano - 4","Erasmus group photo - 5",)
 print("\n")
-print("Welcome in mine filter studio!".upper().center(62),"Which photo would you like to edit?". lower().center(62),
+print("Welcome in mine filter studio!".upper().center(135),"Which photo would you like to edit?". lower().center(135),
           oddelovac,sep="\n")
 print(f"| {' | '.join(photos)} |".center(62), oddelovac, sep="\n")
 
@@ -25,7 +25,8 @@ if (volba0 == 4):
 if (volba0 == 5):
     picture = Image.open("erasmus_group_photo.jpg")   
 
-print("Which filter would you like to apply on photo?".lower().center(62),)
+
+print("Which filter would you like to apply on photo?".lower().center(135),)
 print(f"| {' | '.join(types)} |".center(62), oddelovac, sep="\n")
 
 
